@@ -2,17 +2,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.zefr.plugins</groupId>
+  <groupId>com.trivadis.plugins</groupId>
   <artifactId>avdl2avsc-maven-plugin</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Avro IDL to Avro Schema Maven Plugin</name>
 
-  <url>https://github.com/ZEFR-INC/avdl2avsc-maven-plugin</url>
+  <url>https://github.com/trivadispf/avdl2avsc-maven-plugin</url>
   
   <scm>
-    <url>https://github.com/ZEFR-INC/avdl2avsc-maven-plugin</url>
+    <url>https://github.com/trivadispf/avdl2avsc-maven-plugin</url>
   </scm>
 
   <properties>
@@ -23,14 +23,14 @@
   
     <distributionManagement>
         <repository>
-            <id>zefr</id>
-            <name>Zefr</name>
-            <url>http://nexus.zefr.com/repository/maven-releases/</url>
+            <id>trivadispf</id>
+            <name>trivadispf</name>
+            <url>http://nexus.trivadispf.com/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>zefr-snapshots</id>
-            <name>Zefr Snapshots</name>
-            <url>http://nexus.zefr.com/repository/maven-snapshots/</url>
+            <id>trivadispf-snapshots</id>
+            <name>trivadispf Snapshots</name>
+            <url>http://nexus.trivadispf.com/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     
@@ -38,17 +38,17 @@
     <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-plugin-api</artifactId>
-      <version>3.1.1</version>
+      <version>3.8.4</version>
     </dependency>
     <dependency>
 	    <groupId>org.apache.maven</groupId>
 	    <artifactId>maven-core</artifactId>
-	    <version>3.1.1</version>
+	    <version>3.8.4</version>
 	</dependency>
     <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
       <artifactId>maven-plugin-annotations</artifactId>
-      <version>3.2</version>
+      <version>3.6.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -59,20 +59,20 @@
 	<dependency>
       <groupId>org.apache.maven.plugin-testing</groupId>
       <artifactId>maven-plugin-testing-harness</artifactId>
-      <version>3.0.0</version>
+      <version>3.3.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
 	    <groupId>org.apache.maven</groupId>
 	    <artifactId>maven-compat</artifactId>
-	    <version>3.1.1</version>
+	    <version>3.6.2</version>
 	    <scope>test</scope>
 	</dependency>
     
     <dependency>
         <groupId>org.apache.avro</groupId>
         <artifactId>avro-compiler</artifactId>
-        <version>1.7.5</version>
+        <version>1.11.0</version>
     </dependency>
 	
     <dependency>
@@ -85,19 +85,18 @@
 
   <build>
     <plugins>
-      <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.1</version>
-          <configuration>
-              <source>1.6</source>
-              <target>1.6</target>
-          </configuration>
-      </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>11</source>
+                <target>11</target>
+            </configuration>
+        </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.2</version>
+        <version>3.6.2</version>
         <configuration>
           <goalPrefix>avdl2avsc</goalPrefix>
           <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
