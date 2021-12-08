@@ -25,8 +25,8 @@ Usage:
 Add the following to your maven repositories plugin:
 ```
 <repository>
-  <id>Sameer Maven Repo</id>
-  <url>https://github.com/sameerbhadouria/mvn-repo/raw/master</url>
+  <id>TrivadisPF Maven Repo</id>
+  <url>https://github.com/TrivadisPF/mvn-repo/raw/master</url>
   <snapshots>
      <enabled>true</enabled>
       <updatePolicy>always</updatePolicy>
@@ -39,7 +39,7 @@ Add the following to the maven build plugins:
 <build>
   <plugins>
     <plugin>
-       <groupId>com.sb.plugins</groupId>
+       <groupId>com.trivadispf.plugins</groupId>
        <artifactId>avdl2avsc-maven-plugin</artifactId>
        <version>1.0-SNAPSHOT</version>
        <executions>

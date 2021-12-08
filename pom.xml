@@ -9,10 +9,10 @@
 
   <name>Avro IDL to Avro Schema Maven Plugin</name>
 
-  <url>https://github.com/trivadispf/avdl2avsc-maven-plugin</url>
+  <url>https://github.com/TrivadisPF/avdl2avsc-maven-plugin</url>
   
   <scm>
-    <url>https://github.com/trivadispf/avdl2avsc-maven-plugin</url>
+    <url>https://github.com/TrivadisPF/avdl2avsc-maven-plugin</url>
   </scm>
 
   <properties>
@@ -23,15 +23,10 @@
   
     <distributionManagement>
         <repository>
-            <id>trivadispf</id>
-            <name>trivadispf</name>
-            <url>http://nexus.trivadispf.com/repository/maven-releases/</url>
+            <id>internal.repo</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-artifact</url>
         </repository>
-        <snapshotRepository>
-            <id>trivadispf-snapshots</id>
-            <name>trivadispf Snapshots</name>
-            <url>http://nexus.trivadispf.com/repository/maven-snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>
     
   <dependencies>
@@ -116,6 +111,32 @@
           </execution>
         </executions>
       </plugin>
+        <plugin>
+            <groupId>com.github.github</groupId>
+            <artifactId>site-maven-plugin</artifactId>
+            <version>0.12</version>
+            <configuration>
+                <message>Maven artifacts for ${project.version}</message>
+                <noJekyll>true</noJekyll>
+                <outputDirectory>${project.build.directory}</outputDirectory>
+                <branch>refs/heads/main</branch>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <merge>true</merge>
+                <repositoryName>avdl2avsc-maven-plugin</repositoryName>
+                <repositoryOwner>TrivadisPF</repositoryOwner>
+                <server>github</server>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>site</goal>
+                    </goals>
+                    <phase>deploy</phase>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
   </build>
 </project>
