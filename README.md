@@ -26,7 +26,7 @@ Add the following to your maven repositories plugin:
 ```
 <repository>
   <id>TrivadisPF Maven Repo</id>
-  <url>https://github.com/TrivadisPF/mvn-repo/raw/master</url>
+  <url>https://github.com/TrivadisPF/avdl2avsc-maven-plugin/mvn-repo/</url>
   <snapshots>
      <enabled>true</enabled>
       <updatePolicy>always</updatePolicy>
