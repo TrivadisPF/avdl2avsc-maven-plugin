@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.trivadis.plugins</groupId>
+  <artifactId>avdl2avsc-maven-plugin</artifactId>
+  <versioning>
+    <latest>1.0.1-SNAPSHOT</latest>
+    <versions>
+      <version>1.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20211212203224</lastUpdated>
+  </versioning>
+</metadata>
