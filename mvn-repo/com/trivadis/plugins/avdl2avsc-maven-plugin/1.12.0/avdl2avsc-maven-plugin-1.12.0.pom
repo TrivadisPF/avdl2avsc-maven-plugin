@@ -13,9 +13,6 @@
   
   <scm>
     <url>https://github.com/TrivadisPF/avdl2avsc-maven-plugin</url>
-    <connection>scm:git@github.com:TrivadisPF/avdl2avsc-maven-plugin.git</connection>
-    <developerConnection>scm:git@github.com:TrivadisPF/avdl2avsc-maven-plugin.git</developerConnection>
-    <tag>HEAD</tag>    
   </scm>
 
   <properties>
