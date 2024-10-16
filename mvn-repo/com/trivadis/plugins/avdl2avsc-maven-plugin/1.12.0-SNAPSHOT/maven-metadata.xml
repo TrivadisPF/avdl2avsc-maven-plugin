@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.trivadis.plugins</groupId>
+  <artifactId>avdl2avsc-maven-plugin</artifactId>
+  <versioning>
+    <lastUpdated>20241016120132</lastUpdated>
+    <snapshot>
+      <timestamp>20241016.120132</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.12.0-20241016.120132-1</value>
+        <updated>20241016120132</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.12.0-20241016.120132-1</value>
+        <updated>20241016120132</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>1.12.0-SNAPSHOT</version>
+</metadata>
